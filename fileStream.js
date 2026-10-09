@@ -7,7 +7,11 @@
 
  const writablestream=fs.createWriteStream("./file.txt")
 
- readablestream.on("data",(chunks)=>{
-    console.log(chunks);
-   writablestream.write(chunks)
- })
+//  readablestream.on("data",(chunks)=>{
+//     console.log(chunks);
+//    writablestream.write(chunks)
+//  })
+
+// pip method
+readablestream.pipe(writablestream)
+
